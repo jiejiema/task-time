@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import login from './user/login.vue';
+import forget from './user/forgetPassword.vue';
 import Home from './views/Home.vue';
 
 Vue.use(Router);
@@ -10,9 +12,24 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/home',
       name: 'home',
       component: Home,
     },
+    {
+      path: '/forget-password',
+      name: 'forget-password',
+      component: forget,
+    },
+    // {
+    //   path: '/login',
+    //   name: 'forget-password',
+    //   component: forget,
+    // },
     {
       path: '/about',
       name: 'about',

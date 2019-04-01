@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -28,4 +28,39 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+</style>-->
+<template>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+</template>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    html,
+    body {
+        height: 100%;
+    }
+    #app{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*.userFrom > div > input{*/
+    /*    width: 70%;*/
+    /*    border-radius: 2px;*/
+    /*    padding: 4px 15px;*/
+    /*}*/
 </style>
+
+<script>
+    // export default {
+    //     methods: {
+    //
+    //     }
+    // }
+</script>
