@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import login from './user/login.vue';
+import register from './user/register.vue';
 import forget from './user/forgetPassword.vue';
 import Home from './views/Home.vue';
 
@@ -13,7 +14,12 @@ export default new Router({
     {
       path: '/',
       name: 'login',
-      component: login
+      component: login,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register,
     },
     {
       path: '/home',

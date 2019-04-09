@@ -1,0 +1,43 @@
+.loginBg,.registerBg{
+    height: 100%;
+    background: url("../assets/login-bg.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    width: 40%;
+    padding: 20px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.5);
+}
+.userTitle{
+    text-align: center;
+
+}
+.loginBtn,
+.registerBtn{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-top: 20px;
+    width: 60%;
+    background: rgb(88,158,248);
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.el-form-item{
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.el-form-item__content{
+    width: 70%;
+}
+.el-form-item__label{
+    width: 7vw;
+    text-align: left !important;
+}
