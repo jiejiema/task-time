@@ -22,24 +22,30 @@ export default class Home extends Vue {}
 
 <template>
   <div id="home" class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <navigation></navigation>
+    <navigation/>
   </div>
 </template>
 
 <script lang="ts">
-  import Vue from "vue";
+  /*import Vue from "vue";
   import Component from 'vue-class-component';
-  import navigation from '@/nav/navigation.vue';
-
-  @Component({
-    components: {
-      navigation,
-    },
-  })
-  export default class Home extends Vue {}
+  // @Component({
+  //   components: {
+  //     navv,
+  //   },
+  // })
+  // export default class Home extends Vue {}
   // export default {
   //   name: "home"
-  // }
+  // }*/
+
+
+  import navigation from './mynav/navigation.vue'
+  export default {
+    name: 'home',
+    components: {
+      navigation
+    },
+  }
 
 </script>

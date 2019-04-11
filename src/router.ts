@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import login from './user/login.vue';
-import register from './user/register.vue';
-import forget from './user/forgetPassword.vue';
-import Home from './views/Home.vue';
+import login from './components/user/login.vue';
+import register from './components/user/register.vue';
+import forget from './components/user/forgetPassword.vue';
+import Home from './components/Home.vue';
 
 Vue.use(Router);
 
@@ -12,7 +12,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/login',
       name: 'login',
       component: login,
     },
@@ -31,18 +31,13 @@ export default new Router({
       name: 'forget-password',
       component: forget,
     },
-    // {
-    //   path: '/login',
-    //   name: 'forget-password',
-    //   component: forget,
-    // },
     {
       path: '/about',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import(/* webpackChunkName: "about" */ './components/views/About.vue'),
     },
   ],
 });

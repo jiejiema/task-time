@@ -5,7 +5,6 @@
             <el-form ref="ruleForm" :model="ruleForm" >
                 <el-form-item label="用户" >
                     <el-input v-model="ruleForm.username"></el-input>
-<!--                    <p>{{form.username}}</p>-->
                 </el-form-item>
                 <el-form-item label="密码">
                     <el-input type="password" v-model="ruleForm.password"></el-input>
@@ -17,7 +16,7 @@
                 <router-link to="/register" class="">未注册</router-link>
             </div>
 <!--            <router-link to="/home" class="loginBtn" @click="login()">登录</router-link>-->
-            <a @click="login()" class="loginBtn">登录</a>
+            <a @click="login('ruleForm', ruleForm)" class="loginBtn">登录</a>
             <div class="error">{{error}}</div>
         </div>
     </div>
@@ -31,19 +30,45 @@
         name: "login",
         data() {
             return {
+                routeParams: '222ee',
                 ruleForm: {
                     username: '',
                     password: ''
                 },
-                error:''
+                error:'',
+                rules: {
+                    name: [
+                        { required: true, message: '请输入itcode', trigger: 'blur' },
+                        { min: 5, max: 6, message: '长度在 5 到 6 个字符', trigger: 'blur' }
+                    ],
+                },
             }
         },
+        created(){
+            this.getUser()
+        },
         methods: {
-            login() {
-                // axios.post('http://localhost:3000/users/login',
+            getUser() {
+                this.routeParams = this.$route.params.username;
+                // console.log(this.routeParams)
+                this.ruleForm.username = this.routeParams ? this.routeParams: '';
+            },
+            login(formName, ruleForm) {
                 this.$axioss.post('/users/login',
-                    {'username': 'ma', 'password': 111}).then((response) => {
-                    console.log(response)
+                    {'username': ruleForm.username, 'password': ruleForm.password}).then((response) => {
+                        const result = response.data;
+                    // console.log('response',response);
+                    if (result.result === 0) {
+                        this.$router.push({
+                            name: 'home',
+                            params: {
+                                username: result.data[0].username
+                            }
+
+                        })
+                    } else {
+                        alert(result.message);
+                    }
                 })
             }
 
@@ -52,7 +77,7 @@
 </script>
 
 <style>
-    @import "./user.css";
+    @import "user.css";
 
 
     .otherBtn{

@@ -1,6 +1,6 @@
 .loginBg,.registerBg{
     height: 100%;
-    background: url("../assets/login-bg.jpg") no-repeat;
+    background: url("../../assets/login-bg.jpg") no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
