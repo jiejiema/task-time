@@ -58,7 +58,15 @@
             };
         },
         methods: {
+
             submitForm(formName, ruleForm) {
+                this.$router.push({
+                    name: 'login',
+                    params: {
+                        username: result.data[0].username
+                    }
+
+                });
                 // console.log(ruleForm);
                 // console.log('refs',this.$refs[formName])
 
@@ -66,11 +74,11 @@
                     if (valid) {  // 验证成功
                         this.$axioss.post('/users/register',
                             {'username': ruleForm.name, 'password': ruleForm.password}).then((response) => {
-                                console.log(response)
+                                // console.log(response)
                             const result = response.data;
                             if (result.result === 0) {
                                 alert(result.message);
-                                console.log(result.data[0].username,111);
+                                // console.log(result.data[0].username,111);
                                 this.$router.push({
                                     name: 'login',
                                     params: {

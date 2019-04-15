@@ -22,23 +22,13 @@ export default class Home extends Vue {}
 
 <template>
   <div id="home" class="home">
-    <navigation/>
+    <navigation v-bind:message="routeParams"/>
+<!--    <navigation message="this.routeParams"/>-->
   </div>
 </template>
 
 <script lang="ts">
-  /*import Vue from "vue";
-  import Component from 'vue-class-component';
-  // @Component({
-  //   components: {
-  //     navv,
-  //   },
-  // })
-  // export default class Home extends Vue {}
-  // export default {
-  //   name: "home"
-  // }*/
-
+  /*import Vue from "vue";*/
 
   import navigation from './mynav/navigation.vue'
   export default {
@@ -46,6 +36,26 @@ export default class Home extends Vue {}
     components: {
       navigation
     },
+
+    data() {
+      return {
+        routeParams: 111,
+
+      }
+    },
+    props: ['message'],
+
+    created(){
+      this.getUser()
+    },
+
+    methods: {
+      getUser() {
+        console.log(this.routeParams, 'routeParams');
+        this.routeParams = this.$route.params.username;
+        // console.log(this.routeParams)
+      },
+    }
   }
 
 </script>

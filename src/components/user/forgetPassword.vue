@@ -6,8 +6,8 @@
 
 <script>
     export default {
-        name: "forgetPassword"
-    }
+        name: 'forgetPassword',
+    };
 </script>
 
 <style scoped>

@@ -27,13 +27,13 @@
     // import axios from 'axios';
 
     export default {
-        name: "login",
+        name: 'login',
         data() {
             return {
                 routeParams: '222ee',
                 ruleForm: {
                     username: '',
-                    password: ''
+                    password: '',
                 },
                 error:'',
                 rules: {
