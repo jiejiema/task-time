@@ -21,40 +21,43 @@ export default class Home extends Vue {}
 
 
 <template>
-  <div id="home" class="home">
-    <navigation v-bind:message="routeParams"/>
-<!--    <navigation message="this.routeParams"/>-->
-  </div>
+    <div id="home" class="home">
+        <navigation v-bind:message="routeParams"/>
+        <!--    <navigation message="this.routeParams"/>-->
+        <timee/>
+    </div>
 </template>
 
 <script lang="ts">
-  /*import Vue from "vue";*/
+    /*import Vue from "vue";*/
 
-  import navigation from './mynav/navigation.vue'
-  export default {
-    name: 'home',
-    components: {
-      navigation
-    },
+    import navigation from "./mynav/navigation.vue";
+    import timee from "./views/time.vue";
 
-    data() {
-      return {
-        routeParams: 111,
+    export default {
+        name: "home",
+        components: {
+            navigation,
+            timee
+        },
 
-      }
-    },
-    props: ['message'],
+        data() {
+            return {
+                routeParams: localStorage.getItem('task-userName'),
 
-    created(){
-      this.getUser()
-    },
+            };
+        },
+        props: ["message"],
+
+        created() {
+            // this.getUser();
+        },
 
     methods: {
-      getUser() {
-        console.log(this.routeParams, 'routeParams');
-        this.routeParams = this.$route.params.username;
-        // console.log(this.routeParams)
-      },
+      // getUser() {
+      //   console.log(this.routeParams, 'routeParams');
+      //   this.routeParams = this.$route.params.username;
+      // },
     }
   }
 

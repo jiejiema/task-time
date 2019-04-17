@@ -1,6 +1,6 @@
 <template>
     <div class="navv">
-        <img class="logo" alt="Vue logo" src="../../assets/logo.png">
+        <img class="logo" alt="Vue logo" src="../../assets/img/logo.png">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
 
             <el-menu-item index="1">本月工时</el-menu-item>

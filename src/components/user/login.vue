@@ -64,8 +64,8 @@
                             params: {
                                 username: result.data[0].username
                             }
-
                         })
+                        localStorage.setItem('task-userName', result.data[0].username)
                     } else {
                         alert(result.message);
                     }

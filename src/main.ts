@@ -7,6 +7,9 @@ import axios from 'axios';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import Vuex from 'vuex';
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.compact.css';
+
 // import store from '../vuex/store.js';
 
 Vue.config.productionTip = false;
