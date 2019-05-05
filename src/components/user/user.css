@@ -29,15 +29,15 @@
     border-radius: 2px;
     cursor: pointer;
 }
-.el-form-item{
+.login .el-form-item{
     margin: 15px;
     display: flex;
     justify-content: space-around;
 }
-.el-form-item__content{
+.login .el-form-item__content{
     width: 70%;
 }
-.el-form-item__label{
+.login .el-form-item__label{
     width: 7vw;
     text-align: left !important;
 }

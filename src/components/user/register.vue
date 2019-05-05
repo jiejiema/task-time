@@ -98,6 +98,6 @@
     }
 </script>
 
-<style>
+<style scoped>
     @import "user.css";
 </style>

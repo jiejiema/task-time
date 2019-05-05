@@ -2,8 +2,8 @@
     <div id="login" class="loginBg">
         <div class="login">
             <h3 class="userTitle">LitSoft</h3>
-            <el-form ref="ruleForm" :model="ruleForm" >
-                <el-form-item label="用户" >
+            <el-form ref="ruleForm" :model="ruleForm" :rules="rules">
+                <el-form-item label="用户名" prop="username">
                     <el-input v-model="ruleForm.username"></el-input>
                 </el-form-item>
                 <el-form-item label="密码">
@@ -37,7 +37,7 @@
                 },
                 error:'',
                 rules: {
-                    name: [
+                    username: [
                         { required: true, message: '请输入itcode', trigger: 'blur' },
                         { min: 5, max: 6, message: '长度在 5 到 6 个字符', trigger: 'blur' }
                     ],
@@ -76,9 +76,8 @@
     }
 </script>
 
-<style>
-    @import "user.css";
-
+<style scoped>
+    /*@import "user.css";*/
 
     .otherBtn{
         font-size: 12px;
@@ -87,6 +86,4 @@
     .forget{
         margin-right: 10px;
     }
-
-
 </style>

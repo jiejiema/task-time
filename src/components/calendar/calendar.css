@@ -1,8 +1,8 @@
 /*@media screen and (min-width: 460px) {*/
 .wh_item_date:hover {
     background: #62acec !important;
+    border-radius: 100px;
     cursor: pointer;
-    /*border-radius: 100px;*/
 }
 * {
     margin: 0;
@@ -10,7 +10,7 @@
 }
 
 .wh_container {
-    width: 600px;
+    max-width: 410px;
     margin: auto;
 }
 
@@ -73,7 +73,7 @@ wh_content_item_tag {
     position: relative;
 }
 .wh_content_item {
-    /*height: 60px;*/
+    height: 40px;
 }
 
 .wh_top_tag {
@@ -87,9 +87,9 @@ wh_content_item_tag {
 }
 
 .wh_item_date {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -118,7 +118,7 @@ wh_content_item_tag {
 }
 .wh_content_item > .wh_isMark {
     margin: auto;
-    /*border-radius: 100px;*/
+    border-radius: 100px;
     background: blue;
     z-index: 2;
 }
@@ -130,9 +130,9 @@ wh_content_item_tag {
 }
 .wh_content_item .wh_isToday {
     background: #ffa07c;
-    /*border-radius: 100px;*/
+    border-radius: 100px;
 }
 .wh_content_item .wh_chose_day {
     background: #3d92dc;
-    /*border-radius: 100px;*/
+    border-radius: 100px;
 }

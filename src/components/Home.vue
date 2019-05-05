@@ -24,7 +24,7 @@ export default class Home extends Vue {}
     <div id="home" class="home">
         <navigation v-bind:message="routeParams"/>
         <!--    <navigation message="this.routeParams"/>-->
-        <timee/>
+        <timee :message="routeParams"/>
     </div>
 </template>
 
